@@ -39,7 +39,7 @@ class _ScanBarcodeState extends State<ScanBarcode> {
             setState(() {
               this._barcode = _barcode;
             });
-            fileWriter.writeFile(newFile);
+            fileWriter.writeFile(_barcode);
           } on PlatformException catch (error) {
             if (error.code == BarcodeScanner.CameraAccessDenied) {
               setState(() {
